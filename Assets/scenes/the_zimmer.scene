@@ -1,0 +1,1195 @@
+{
+  "__guid": "325a4042-0696-43dd-a79d-dcc314299ba3",
+  "GameObjects": [
+    {
+      "__guid": "0a36cb8d-2871-4cca-ad99-f5b0741ea46b",
+      "Flags": 0,
+      "Name": "Map",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "df9acc57-d5de-4283-ab55-6111ac4b9828",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/the_zimmer.vmap",
+          "NoOrigin": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "017264cd-054c-4902-9063-bf6b8e6a76f1",
+      "Flags": 0,
+      "Name": "VR",
+      "Position": "-501.1683,-64,32",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ManagerVR",
+          "__guid": "45bf60aa-d1d7-49c6-a2ab-f8074decc16b",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "PlayerVR": {
+            "_type": "gameobject",
+            "go": "4da64298-cbb6-4699-b8a9-6ad5f4c28460"
+          },
+          "SimulatorVR": {
+            "_type": "gameobject",
+            "go": "bf1391e9-5808-41c3-8579-60e2ccd8942a"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "4da64298-cbb6-4699-b8a9-6ad5f4c28460",
+          "Flags": 0,
+          "Name": "Player",
+          "Position": "-50,0,30",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ControllerVR",
+              "__guid": "f70165f1-8bd3-445c-8598-e39a405ac42f",
+              "DebugHUDVR": {
+                "_type": "component",
+                "component_id": "952a80c7-cc86-4edb-aa49-e5a435932635",
+                "go": "b9fe5cb3-4d6a-461f-a79c-3b8bfcdb9e55",
+                "component_type": "ControllerDebugHUDVR"
+              },
+              "IsDebugMode": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            },
+            {
+              "__type": "Sandbox.VR.VRAnchor",
+              "__guid": "bec9a930-a6d1-4525-b0f0-325a95575eb8",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "12757c72-9fd9-4a7f-821c-9498ef5d4e1f",
+              "Flags": 0,
+              "Name": "Head",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.CameraComponent",
+                  "__guid": "cf146b27-b5b2-4765-925f-fe177f2374f8",
+                  "BackgroundColor": "0.33333,0.46275,0.52157,1",
+                  "ClearFlags": "All",
+                  "FieldOfView": 90,
+                  "FovAxis": "Horizontal",
+                  "IsMainCamera": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Orthographic": false,
+                  "OrthographicHeight": 1204,
+                  "Priority": 1,
+                  "RenderExcludeTags": "",
+                  "RenderTags": "",
+                  "TargetEye": "Both",
+                  "Viewport": "0,0,1,1",
+                  "ZFar": 5000,
+                  "ZNear": 1
+                },
+                {
+                  "__type": "Sandbox.VR.VRTrackedObject",
+                  "__guid": "b7200276-f4ea-4ab0-a245-8bcfaa29bd7a",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PoseSource": "Head",
+                  "TrackingType": "All",
+                  "UseRelativeTransform": false
+                }
+              ]
+            },
+            {
+              "__guid": "993d3d1b-d3b1-458d-8c24-72497acb4f43",
+              "Flags": 0,
+              "Name": "Left Hand",
+              "Position": "0,5.222285,0",
+              "Rotation": "0,0,0,0",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.VR.VRTrackedObject",
+                  "__guid": "5eb08c85-ca66-4e17-9f8e-e555452d8438",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PoseSource": "LeftHand",
+                  "TrackingType": "All",
+                  "UseRelativeTransform": false
+                },
+                {
+                  "__type": "ControllerHandVR",
+                  "__guid": "6ee181aa-b8f4-491e-9815-8098ca2dd652",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "dd3e70c0-cdff-4624-b5fd-f3cdbab15041",
+                  "Flags": 0,
+                  "Name": "Left Hand Model",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.SkinnedModelRenderer",
+                      "__guid": "ea19312a-acce-482a-b6e3-22ce8fd0546b",
+                      "AnimationGraph": null,
+                      "BodyGroups": 18446744073709551615,
+                      "BoneMergeTarget": null,
+                      "CreateAttachments": false,
+                      "CreateBoneObjects": false,
+                      "MaterialGroup": null,
+                      "MaterialOverride": null,
+                      "Model": "models/vr_hand_left.vmdl",
+                      "Morphs": {},
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null,
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
+                      "PlaybackRate": 1,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
+                      "RenderType": "On",
+                      "Sequence": {
+                        "Name": null
+                      },
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "27b26370-9716-4eaf-a858-350f268a5eb9",
+              "Flags": 0,
+              "Name": "Right Hand",
+              "Position": "0,-6.932611,0",
+              "Rotation": "0,0,0,0",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.VR.VRTrackedObject",
+                  "__guid": "b96283c2-d9cc-4b94-be65-a26b6b08f376",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PoseSource": "RightHand",
+                  "TrackingType": "All",
+                  "UseRelativeTransform": false
+                },
+                {
+                  "__type": "TeleportVR",
+                  "__guid": "3bea2bfd-c656-4036-bc04-6f65536a8c34",
+                  "handType": "None",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                },
+                {
+                  "__type": "ControllerHandVR",
+                  "__guid": "2a603f69-ceac-42e5-ba6f-201160b49466",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "d7d237e5-4a2c-44aa-ac1b-c5941a0f9486",
+                  "Flags": 0,
+                  "Name": "Right Hand Model",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.SkinnedModelRenderer",
+                      "__guid": "e4b16589-d829-4873-a096-d2ae85d8e9da",
+                      "AnimationGraph": null,
+                      "BodyGroups": 18446744073709551615,
+                      "BoneMergeTarget": null,
+                      "CreateAttachments": false,
+                      "CreateBoneObjects": false,
+                      "MaterialGroup": null,
+                      "MaterialOverride": null,
+                      "Model": "models/vr_hand_right.vmdl",
+                      "Morphs": {},
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null,
+                      "Parameters": {
+                        "bools": {},
+                        "ints": {},
+                        "floats": {},
+                        "vectors": {},
+                        "rotations": {}
+                      },
+                      "PlaybackRate": 1,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
+                      "RenderType": "On",
+                      "Sequence": {
+                        "Name": null
+                      },
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "b9fe5cb3-4d6a-461f-a79c-3b8bfcdb9e55",
+              "Flags": 0,
+              "Name": "Debug HUD VR",
+              "Position": "100,0,0",
+              "Rotation": "0,0,1,-0.00000004371139",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.WorldPanel",
+                  "__guid": "8b1f3007-d30b-49c1-ad80-8099f30b4577",
+                  "HorizontalAlign": "Center",
+                  "InteractionRange": 1000,
+                  "LookAtCamera": false,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PanelSize": "1024,1024",
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderScale": 10,
+                  "VerticalAlign": "Center"
+                },
+                {
+                  "__type": "ControllerDebugHUDVR",
+                  "__guid": "952a80c7-cc86-4edb-aa49-e5a435932635",
+                  "DebugPanel": {
+                    "_type": "component",
+                    "component_id": "8b1f3007-d30b-49c1-ad80-8099f30b4577",
+                    "go": "b9fe5cb3-4d6a-461f-a79c-3b8bfcdb9e55",
+                    "component_type": "WorldPanel"
+                  },
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "bf1391e9-5808-41c3-8579-60e2ccd8942a",
+          "Flags": 0,
+          "Name": "Simulator",
+          "Position": "-50,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CharacterController",
+              "__guid": "9b552b5b-31d6-48d2-b07a-0627c8f9ddaa",
+              "Acceleration": 10,
+              "Bounciness": 0.3,
+              "GroundAngle": 45,
+              "Height": 64,
+              "IgnoreLayers": "",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 16,
+              "StepHeight": 18,
+              "UseCollisionRules": false
+            },
+            {
+              "__type": "SimulatorVR",
+              "__guid": "67dc60a5-0910-4797-a01e-07d66cbe624f",
+              "Deacceleration": 4,
+              "LeftHand": {
+                "_type": "component",
+                "component_id": "38fd7e8b-c066-47c7-b745-6ed271375744",
+                "go": "0eeee1b7-9fe6-45c0-bc24-c6f6f710a165",
+                "component_type": "SimulatorHand"
+              },
+              "MouseSensitivity": 2,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RightHand": {
+                "_type": "component",
+                "component_id": "e9237191-78f0-4551-8065-7fe7837e1859",
+                "go": "a2dcdf69-3027-4056-a8cc-4a8c751656f1",
+                "component_type": "SimulatorHand"
+              },
+              "RunSpeed": 50,
+              "WalkSpeed": 10
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "412aff1e-31ff-4226-90fb-e751a314e81b",
+              "Flags": 0,
+              "Name": "Main Camera",
+              "Position": "0,0,30",
+              "Tags": "maincamera",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.CameraComponent",
+                  "__guid": "b5c5d826-8778-4821-a774-2599b949d9d6",
+                  "BackgroundColor": "0.33333,0.46275,0.52157,1",
+                  "ClearFlags": "All",
+                  "FieldOfView": 90,
+                  "FovAxis": "Horizontal",
+                  "IsMainCamera": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Orthographic": false,
+                  "OrthographicHeight": 1204,
+                  "Priority": 1,
+                  "RenderExcludeTags": "",
+                  "RenderTags": "",
+                  "TargetEye": "None",
+                  "Viewport": "0,0,1,1",
+                  "ZFar": 10000,
+                  "ZNear": 10
+                }
+              ]
+            },
+            {
+              "__guid": "de589317-f67c-424b-8800-27da43863473",
+              "Flags": 0,
+              "Name": "HMD",
+              "Enabled": true
+            },
+            {
+              "__guid": "a2dcdf69-3027-4056-a8cc-4a8c751656f1",
+              "Flags": 0,
+              "Name": "Right Hand",
+              "Position": "25,-10,25",
+              "Scale": "0.1,0.1,0.1",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "SimulatorHand",
+                  "__guid": "e9237191-78f0-4551-8065-7fe7837e1859",
+                  "BaseColor": {
+                    "blend": "Linear",
+                    "color": [
+                      {
+                        "t": 0,
+                        "c": "0,0,0,1"
+                      },
+                      {
+                        "t": 1,
+                        "c": "1,1,1,1"
+                      }
+                    ],
+                    "alpha": [
+                      {
+                        "t": 0,
+                        "a": 1
+                      },
+                      {
+                        "t": 1,
+                        "a": 1
+                      }
+                    ]
+                  },
+                  "ControllerMode": false,
+                  "DebugRaycasts": false,
+                  "HandType": "Right",
+                  "Line": {
+                    "_type": "component",
+                    "component_id": "b7ce606f-4dd7-4dde-a8a3-2130e4611fbd",
+                    "go": "54cd7ecc-73a5-4df9-ad7b-165ba78b66fc",
+                    "component_type": "RaycastLine"
+                  },
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PickupColliderScaleMultiplier": 3,
+                  "Range": 50,
+                  "RaycastTags": "Grabbable",
+                  "TargetColor": {
+                    "blend": "Linear",
+                    "color": [
+                      {
+                        "t": 0,
+                        "c": "0.5451,0,0,1"
+                      },
+                      {
+                        "t": 0.33,
+                        "c": "1,0,0,1"
+                      },
+                      {
+                        "t": 0.66,
+                        "c": "1,0.64706,0,1"
+                      },
+                      {
+                        "t": 1,
+                        "c": "1,1,0,1"
+                      }
+                    ],
+                    "alpha": [
+                      {
+                        "t": 0,
+                        "a": 1
+                      },
+                      {
+                        "t": 1,
+                        "a": 1
+                      }
+                    ]
+                  }
+                },
+                {
+                  "__type": "TeleportVR",
+                  "__guid": "b8aa9c7d-f41a-4cc5-ae35-20745b1a6ed7",
+                  "handType": "Right",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "22ded2d5-edc2-46dd-b344-0e2337b2b93c",
+                  "Flags": 0,
+                  "Name": "Hand Model",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.ModelRenderer",
+                      "__guid": "d3545510-9a6d-4ffc-b153-fad0a751eef1",
+                      "BodyGroups": 18446744073709551615,
+                      "CreateAttachments": false,
+                      "MaterialGroup": null,
+                      "MaterialOverride": null,
+                      "Model": "models/dev/box.vmdl",
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
+                      "RenderType": "On",
+                      "Tint": "1,1,1,1"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "54cd7ecc-73a5-4df9-ad7b-165ba78b66fc",
+                  "Flags": 0,
+                  "Name": "Raycaster",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "RaycastLine",
+                      "__guid": "b7ce606f-4dd7-4dde-a8a3-2130e4611fbd",
+                      "IsEnabled": true,
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null
+                    },
+                    {
+                      "__type": "Sandbox.LineRenderer",
+                      "__guid": "002a514e-dee8-4238-866b-c325e816536e",
+                      "Additive": false,
+                      "CastShadows": true,
+                      "Color": {
+                        "blend": "Linear",
+                        "color": [
+                          {
+                            "t": 0,
+                            "c": "0,0,0,1"
+                          },
+                          {
+                            "t": 1,
+                            "c": "1,1,1,1"
+                          }
+                        ],
+                        "alpha": [
+                          {
+                            "t": 0,
+                            "a": 1
+                          },
+                          {
+                            "t": 1,
+                            "a": 1
+                          }
+                        ]
+                      },
+                      "DepthFeather": 0,
+                      "EndCap": "None",
+                      "Face": "Normal",
+                      "FogStrength": 1,
+                      "Lighting": false,
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null,
+                      "Opaque": true,
+                      "Points": [],
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
+                      "SplineBias": 0,
+                      "SplineContinuity": 0,
+                      "SplineInterpolation": 0,
+                      "SplineTension": 0,
+                      "StartCap": "None",
+                      "Texturing": {
+                        "Texture": null,
+                        "WorldSpace": true,
+                        "UnitsPerTexture": 10,
+                        "Scale": 1,
+                        "Offset": 0,
+                        "Scroll": 0
+                      },
+                      "UseVectorPoints": true,
+                      "VectorPoints": [],
+                      "Width": [
+                        {
+                          "x": 0.25,
+                          "y": 0.25,
+                          "in": 0,
+                          "out": 0,
+                          "mode": "Mirrored"
+                        }
+                      ],
+                      "Wireframe": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "0eeee1b7-9fe6-45c0-bc24-c6f6f710a165",
+              "Flags": 0,
+              "Name": "Left Hand",
+              "Position": "25.00006,-10,25",
+              "Scale": "0.1,0.1,0.1",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "SimulatorHand",
+                  "__guid": "38fd7e8b-c066-47c7-b745-6ed271375744",
+                  "BaseColor": {
+                    "blend": "Linear",
+                    "color": [
+                      {
+                        "t": 0,
+                        "c": "0,0,0,1"
+                      },
+                      {
+                        "t": 1,
+                        "c": "1,1,1,1"
+                      }
+                    ],
+                    "alpha": [
+                      {
+                        "t": 0,
+                        "a": 1
+                      },
+                      {
+                        "t": 1,
+                        "a": 1
+                      }
+                    ]
+                  },
+                  "ControllerMode": false,
+                  "DebugRaycasts": false,
+                  "HandType": "Left",
+                  "Line": {
+                    "_type": "component",
+                    "component_id": "00835a08-6dd9-41ab-8fe5-c21c7e2e2d8d",
+                    "go": "a0c51ce8-8433-4bea-8e68-fe4f149a1b6d",
+                    "component_type": "RaycastLine"
+                  },
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PickupColliderScaleMultiplier": 3,
+                  "Range": 50,
+                  "RaycastTags": "Grabbable",
+                  "TargetColor": {
+                    "blend": "Linear",
+                    "color": [
+                      {
+                        "t": 0,
+                        "c": "0.5451,0,0,1"
+                      },
+                      {
+                        "t": 0.33,
+                        "c": "1,0,0,1"
+                      },
+                      {
+                        "t": 0.66,
+                        "c": "1,0.64706,0,1"
+                      },
+                      {
+                        "t": 1,
+                        "c": "1,1,0,1"
+                      }
+                    ],
+                    "alpha": [
+                      {
+                        "t": 0,
+                        "a": 1
+                      },
+                      {
+                        "t": 1,
+                        "a": 1
+                      }
+                    ]
+                  }
+                },
+                {
+                  "__type": "TeleportVR",
+                  "__guid": "32d5cede-a5ba-49d5-9fbd-1a415c430403",
+                  "handType": "Left",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "20274d9a-4dce-4ed8-8908-a89eaf4bd65e",
+                  "Flags": 0,
+                  "Name": "Hand Model",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.ModelRenderer",
+                      "__guid": "d2dc8920-ffa7-4113-a4a6-cc1106911fae",
+                      "BodyGroups": 18446744073709551615,
+                      "CreateAttachments": false,
+                      "MaterialGroup": null,
+                      "MaterialOverride": null,
+                      "Model": "models/dev/box.vmdl",
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
+                      "RenderType": "On",
+                      "Tint": "1,1,1,1"
+                    }
+                  ]
+                },
+                {
+                  "__guid": "a0c51ce8-8433-4bea-8e68-fe4f149a1b6d",
+                  "Flags": 0,
+                  "Name": "Raycaster",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "RaycastLine",
+                      "__guid": "00835a08-6dd9-41ab-8fe5-c21c7e2e2d8d",
+                      "IsEnabled": true,
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null
+                    },
+                    {
+                      "__type": "Sandbox.LineRenderer",
+                      "__guid": "ce912f1a-a71c-4b32-beba-cb6560bf7b6f",
+                      "Additive": false,
+                      "CastShadows": true,
+                      "Color": {
+                        "blend": "Linear",
+                        "color": [
+                          {
+                            "t": 0,
+                            "c": "0,0,0,1"
+                          },
+                          {
+                            "t": 1,
+                            "c": "1,1,1,1"
+                          }
+                        ],
+                        "alpha": [
+                          {
+                            "t": 0,
+                            "a": 1
+                          },
+                          {
+                            "t": 1,
+                            "a": 1
+                          }
+                        ]
+                      },
+                      "DepthFeather": 0,
+                      "EndCap": "None",
+                      "Face": "Normal",
+                      "FogStrength": 1,
+                      "Lighting": false,
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null,
+                      "Opaque": true,
+                      "Points": [],
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
+                      "SplineBias": 0,
+                      "SplineContinuity": 0,
+                      "SplineInterpolation": 0,
+                      "SplineTension": 0,
+                      "StartCap": "None",
+                      "Texturing": {
+                        "Texture": null,
+                        "WorldSpace": true,
+                        "UnitsPerTexture": 10,
+                        "Scale": 1,
+                        "Offset": 0,
+                        "Scroll": 0
+                      },
+                      "UseVectorPoints": true,
+                      "VectorPoints": [],
+                      "Width": [
+                        {
+                          "x": 0.25,
+                          "y": 0.25,
+                          "in": 0,
+                          "out": 0,
+                          "mode": "Mirrored"
+                        }
+                      ],
+                      "Wireframe": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "0bd681c2-c31a-4d7f-a28a-450f4eed834f",
+      "Flags": 0,
+      "Name": "Debug",
+      "Position": "287.9596,108.3494,42.45958",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "2cae5bb0-3a0e-4fd5-b0bc-6d5a1da0cf4c",
+          "Flags": 0,
+          "Name": "Test_InputDelta",
+          "Position": "-458.8809,-179.0538,32.62834",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "InputDeltaTest",
+              "__guid": "914d2d3f-238d-4ad6-bb0f-45b2884d61a3",
+              "__enabled": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "ba948605-d592-42c1-82b5-b1aa81c07433",
+      "Flags": 0,
+      "Name": "Entities",
+      "Position": "267.0613,256.5711,57.50866",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "67333b6c-6af4-4a6a-aeef-7b0bcc1c2a7c",
+          "Flags": 0,
+          "Name": "shrek1",
+          "Position": "-256.8795,-232.3229,-25.49656",
+          "Rotation": "0,0,1,0.0000001947072",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "6657c70c-6347-40d7-8d5d-3d6651e72573",
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": false,
+              "MaterialGroup": null,
+              "Model": "models/shrek1.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnPropBreak": null,
+              "OnPropTakeDamage": null,
+              "StartAsleep": false,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "GrabbableVR",
+              "__guid": "9c8f8a4c-2750-4160-8462-3402571c3ff6",
+              "Collider": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Rigidbody": null
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "cf2dadea-6e72-4c60-b63a-8daf51a22fae",
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {
+                "X": false,
+                "Y": false,
+                "Z": false,
+                "Pitch": false,
+                "Yaw": false,
+                "Roll": false
+              },
+              "MassCenterOverride": "0,0,0",
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OverrideMassCenter": false,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            }
+          ]
+        },
+        {
+          "__guid": "a1b6f6a5-44c4-48e5-9fb1-d52f766be474",
+          "Flags": 0,
+          "Name": "b1911",
+          "Position": "-632.5565,-338.324,69.75294",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "afc56124-ec9f-4acd-a265-d56a6650b9af",
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "sbox/bonwork/1911/b1911.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "f9521e84-f907-4951-a907-55e11c01576c",
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {
+                "X": false,
+                "Y": false,
+                "Z": false,
+                "Pitch": false,
+                "Yaw": false,
+                "Roll": false
+              },
+              "MassCenterOverride": "0,0,0",
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OverrideMassCenter": false,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "81043fc6-77b8-4310-8b5c-c2dfc655030c",
+              "Center": "0,0,-1",
+              "Friction": null,
+              "IsTrigger": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "14,3,8.5",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "GrabbableVR",
+              "__guid": "694bf5cb-f060-49dc-ba9c-04d6766f54cc",
+              "Collider": null,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Rigidbody": null
+            }
+          ]
+        },
+        {
+          "__guid": "f90b0b04-b92d-4994-937b-9e926ed91a37",
+          "Flags": 0,
+          "Name": "Spotlight",
+          "Position": "-542.0922,-186.9548,52.39808",
+          "Scale": "0.7922776,0.7922776,0.7922776",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "f8eab679-e304-4d3c-89d9-b64d717921fa",
+              "Attenuation": 1,
+              "FogMode": "Disabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 400,
+              "Shadows": true
+            }
+          ]
+        },
+        {
+          "__guid": "95dee08a-3608-417e-82e4-dd421f384b5d",
+          "Flags": 0,
+          "Name": "TeleportArea",
+          "Position": "0,0,-18.56129",
+          "Scale": "5.366504,6.755648,0.2916697",
+          "Tags": "teleport",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "e235fab1-4be1-4167-9caa-e1e3761b4cc1",
+              "Center": "0,0,0",
+              "Friction": null,
+              "IsTrigger": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "Metadata": {},
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "ResourceVersion": 2,
+  "Title": null,
+  "Description": null,
+  "__references": [
+    "azumangafans.shrek-ragdoll#37192",
+    "krotter.vr_hand_left#28196",
+    "krotter.vr_hand_right#28197",
+    "vrchtes.b1911#5396"
+  ],
+  "__version": 2
+}

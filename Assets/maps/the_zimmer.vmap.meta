@@ -1,0 +1,24 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "The Zimmer",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "thezimmer",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.woodtrimpolishedblend03#79834",
+        "oleshkus.wall_2#57404",
+        "rustextended.office_ceiling_damaged#43329"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/the_zimmer.vmap"
+      }
+    }
+  }
+}
