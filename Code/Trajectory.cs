@@ -53,7 +53,7 @@ public class TrajectoryUtils {
 
         StepTrajectory(transform, angleDegrees, xMaxDistance, stepSize, (from, to) => {
             var direction = to - from;
-            tr = trace.Ray(new Ray(from, direction.Normal), stepSize).IgnoreGameObject(transform.GameObject).Run();
+            tr = trace.Sphere(stepSize, from, to).IgnoreGameObject(transform.GameObject).Run();
 
             if (overlay != null) {
                 var fromRight = from + transform.World.Right * 5;
