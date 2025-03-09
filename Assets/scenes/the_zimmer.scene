@@ -242,6 +242,7 @@
                   "__type": "TeleportVR",
                   "__guid": "3bea2bfd-c656-4036-bc04-6f65536a8c34",
                   "handType": "None",
+                  "IsDebugMode": false,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -488,8 +489,8 @@
                     ]
                   },
                   "ControllerMode": false,
-                  "DebugRaycasts": false,
                   "HandType": "Right",
+                  "IsDebugMode": true,
                   "Line": {
                     "_type": "component",
                     "component_id": "b7ce606f-4dd7-4dde-a8a3-2130e4611fbd",
@@ -541,6 +542,7 @@
                   "__type": "TeleportVR",
                   "__guid": "b8aa9c7d-f41a-4cc5-ae35-20745b1a6ed7",
                   "handType": "Right",
+                  "IsDebugMode": false,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -710,8 +712,8 @@
                     ]
                   },
                   "ControllerMode": false,
-                  "DebugRaycasts": false,
                   "HandType": "Left",
+                  "IsDebugMode": false,
                   "Line": {
                     "_type": "component",
                     "component_id": "00835a08-6dd9-41ab-8fe5-c21c7e2e2d8d",
@@ -763,6 +765,7 @@
                   "__type": "TeleportVR",
                   "__guid": "32d5cede-a5ba-49d5-9fbd-1a415c430403",
                   "handType": "Left",
+                  "IsDebugMode": false,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,

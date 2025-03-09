@@ -8,12 +8,15 @@ struct TeleportInformation {
     public Vector3 Position;
 }
 
-public sealed class TeleportVR : Component, IHandType
+public sealed class TeleportVR : Component, IHandType, IDebugCasts
 {
     [Property] public SimulatorHandType handType;
 
+    [Property] public bool IsDebugMode;
+
     float trajectoryAngle = 45f; // Starting angle
     float trajectoryDistance = 300f; // Starting distance
+    float velocityDelta = 50f; // 50 is 1 Meter
     bool teleportMode = false;
     TeleportInformation teleportInformation;
     ITeleportable teleportable;
@@ -58,9 +61,7 @@ public sealed class TeleportVR : Component, IHandType
 		if (IsJumpPressed()) {
             teleportMode = true;
 
-            float mouseY = Input.MouseDelta.y * Time.Delta;
-            Log.Info(trajectoryDistance);
-            // trajectoryAngle += LerpingUtils.Lerp(15f, 45f, mouseY); //Math.Clamp(trajectoryAngle, 15f, 45f);
+            float mouseY = Input.MouseDelta.y * Time.Delta * velocityDelta;
             trajectoryAngle -= mouseY;
             trajectoryAngle = Math.Clamp(trajectoryDistance, 15f, 45f);
             trajectoryDistance -= mouseY;
@@ -74,17 +75,16 @@ public sealed class TeleportVR : Component, IHandType
                     Position = tr.HitPosition,
                 };
             }
-
-            DebugOverlay.Sphere(new Sphere(tr.EndPosition, 25f), Color.Red);
+            
+            DebugOverlay.Sphere(new Sphere(tr.HitPosition, 25f), Color.Red);
 		}
     }
 
     private void ProcessTeleport() {
         if (IsJumpReleased() && teleportInformation.Allowed) {
-            Log.Info("Teleport Position"+teleportInformation.Position);
-            // if (teleportable != null) {
-            //     teleportable.Teleport(teleportInformation.Position);
-            // }
+            if (teleportable != null) {
+                teleportable.Teleport(teleportInformation.Position);
+            }
             DebugOverlay.Box(BBox.FromPositionAndSize(teleportInformation.Position, 50f), Color.Red, duration: 5);
             teleportMode = false;
             teleportInformation = new TeleportInformation() {
@@ -113,4 +113,9 @@ public sealed class TeleportVR : Component, IHandType
 	{
         return handType == SimulatorHandType.Left;
 	}
+
+	public bool GetDebugMode()
+	{
+        return IsDebugMode;
+    }
 }

@@ -9,7 +9,7 @@ class GrabbableFinder {
 	public Vector3? EndPosition;
 }
 
-public sealed class SimulatorHand : Component, IHandType
+public sealed class SimulatorHand : Component, IHandType, IControllerMode, IDebugCasts
 {
 	[Property] public RaycastLine Line;
 	[Property] public bool ControllerMode;
@@ -18,7 +18,7 @@ public sealed class SimulatorHand : Component, IHandType
 	[Property] public Gradient TargetColor;
 	[Property] public TagSet RaycastTags = new TagSet();
 	[Property] public int PickupColliderScaleMultiplier = 2;
-	[Property] public bool DebugRaycasts = false;
+	[Property] public bool IsDebugMode = false;
 	[Property] public SimulatorHandType HandType = SimulatorHandType.None;
 	bool _pickupMode = false;
 	GrabbableFinder _raycastFind = new GrabbableFinder();
@@ -67,11 +67,8 @@ public sealed class SimulatorHand : Component, IHandType
 
 	private void ToggleControllerMode()
 	{
-		if (IsRightHand()) {
-			if ( Input.Pressed( "Drop" ) )
-			{
-				ControllerMode = !ControllerMode;
-			}
+		if (IsRightHand() && GetControllerModeKeyPressed()) {
+			ControllerMode = !ControllerMode;
 		}
 	}
 
@@ -97,7 +94,7 @@ public sealed class SimulatorHand : Component, IHandType
 		// SceneTraceResult tr = Scene.Trace.Ray(WorldPosition + Transform.World.Forward, GetRaycastEndPosition() ).Run();
 		SceneTraceResult tr = Scene.Trace.Sphere(3f, WorldPosition + Transform.World.Forward, GetRaycastEndPosition()).IgnoreGameObject(GameObject).Run();
 
-		if (DebugRaycasts) {
+		if (IsDebugMode) {
 			DebugOverlay.Sphere(new Sphere(debugSpherePosition, 3f), Color.Red);
 		}
 
@@ -118,7 +115,7 @@ public sealed class SimulatorHand : Component, IHandType
 		if ( ControllerMode )
 		{
 			var mouseDelta = Input.MouseDelta * 2; // Times Rotation Speed
-			LocalRotation =Rotation.FromAxis( Vector3.Up, -mouseDelta.x * Time.Delta ) * LocalRotation * Rotation.FromAxis( Vector3.Left, mouseDelta.y * Time.Delta );
+			LocalRotation = Rotation.FromAxis( Vector3.Up, -mouseDelta.x * Time.Delta ) * LocalRotation * Rotation.FromAxis( Vector3.Left, mouseDelta.y * Time.Delta );
 		}
 	}
 
@@ -130,5 +127,20 @@ public sealed class SimulatorHand : Component, IHandType
 	public bool IsLeftHand()
 	{
 		return HandType == SimulatorHandType.Right;
+	}
+
+	public bool GetControllerMode()
+	{
+		return ControllerMode;
+	}
+
+	public bool GetControllerModeKeyPressed()
+	{
+		return Input.Pressed("Drop");
+	}
+
+	public bool GetDebugMode()
+	{
+		return IsDebugMode;
 	}
 }
