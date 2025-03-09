@@ -124,8 +124,13 @@ public sealed class SimulatorVR : Component, ITeleportable
 		_MovementSpeed = Input.Down("Run") ? RunSpeed : WalkSpeed; 
 	}
 
-	void ITeleportable.Teleport( Vector3 coordinate )
+	public void Teleport( Vector3 coordinate )
 	{
 		WorldPosition = coordinate;
+	}
+
+	public GameTransform GetTransformForTeleporation()
+	{
+		return Transform;
 	}
 }

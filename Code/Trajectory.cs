@@ -29,7 +29,7 @@ public class TrajectoryUtils {
         
         float distanceAngled = x * tanAngle;
 
-        float gravity = 850;
+        float gravity = 850; // Source default?
         float gravityByDistance = gravity * x * x;
 
         float velocitySquared = velocityLength * velocityLength;
@@ -61,7 +61,7 @@ public class TrajectoryUtils {
                 overlay.Line(new Line(fromRight, toRight), tr.Hit ? Color.Red: Color.White);
             }
 
-            if (tr.Hit && tr.GameObject.Tags.Contains("teleport")) {
+            if (tr.Hit) {
                 return false;
             };
 

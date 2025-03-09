@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using Sandbox;
 
@@ -71,7 +72,7 @@ public sealed class TeleportVR : Component, IHandType, IDebugCasts
             SceneTraceResult tr = TrajectoryUtils.RayTrajectory(DebugOverlay, Scene.Trace, Transform, 45f, trajectoryDistance, 25);
             if (tr.Hit) {
                 teleportInformation = new TeleportInformation() {
-                    Allowed = true,
+                    Allowed = tr.GameObject.Tags.Contains("teleport"),
                     Position = tr.HitPosition,
                 };
             }
@@ -83,7 +84,8 @@ public sealed class TeleportVR : Component, IHandType, IDebugCasts
     private void ProcessTeleport() {
         if (IsJumpReleased() && teleportInformation.Allowed) {
             if (teleportable != null) {
-                teleportable.Teleport(teleportInformation.Position);
+                Vector3 teleportTarget = teleportable.GetTransformForTeleporation().World.Forward * teleportInformation.Position.x + teleportable.GetTransformForTeleporation().World.Left * teleportInformation.Position.y; 
+                teleportable.Teleport(teleportInformation.Position); // Add min(...) for height
             }
             DebugOverlay.Box(BBox.FromPositionAndSize(teleportInformation.Position, 50f), Color.Red, duration: 5);
             teleportMode = false;

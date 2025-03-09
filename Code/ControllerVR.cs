@@ -79,4 +79,9 @@ public sealed class ControllerVR : Component, ITeleportable
 	{
 		WorldPosition = coordinate;
 	}
+
+	public GameTransform GetTransformForTeleporation()
+	{
+		return Transform;
+	}
 }
