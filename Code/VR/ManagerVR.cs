@@ -1,15 +1,15 @@
 using Sandbox;
 
-public sealed class ManagerVR : Component
+public sealed class ManagerVR : Component, IVRInstance
 {
 
 	[Property] GameObject PlayerVR;
-	[Property] GameObject SimulatorVR;
+	[Property] GameObject PlayerNonVR;
 
 	protected override void OnStart()
 	{
 		if (Game.IsRunningInVR) {
-			SimulatorVR.Enabled = false;
+			PlayerNonVR.Enabled = false;
 		} else {
 			PlayerVR.Enabled = false;
 		}

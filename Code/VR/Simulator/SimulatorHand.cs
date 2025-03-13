@@ -5,7 +5,7 @@ using Sandbox.UI;
 
 class GrabbableFinder {
 	// This always stores the latest grabbable until another one is found.
-	public GrabbableVR Grabbable;
+	public Grabbable Grabbable;
 	public Vector3? EndPosition;
 }
 
@@ -98,9 +98,9 @@ public sealed class SimulatorHand : Component, IHandType, IControllerMode, IDebu
 			DebugOverlay.Sphere(new Sphere(debugSpherePosition, 3f), Color.Red);
 		}
 
-		if ( tr.Hit && tr.GameObject.GetComponent<GrabbableVR>() != null)
+		if ( tr.Hit && tr.GameObject.GetComponent<Grabbable>() != null)
 		{
-			_raycastFind.Grabbable = tr.GameObject.GetComponent<GrabbableVR>();
+			_raycastFind.Grabbable = tr.GameObject.GetComponent<Grabbable>();
 			_raycastFind.EndPosition = tr.EndPosition;
 			return _raycastFind;
 		} else {

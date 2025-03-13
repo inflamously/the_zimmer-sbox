@@ -1,13 +1,15 @@
 using Sandbox;
 
-public sealed class GrabbableVR : Component
+public sealed class Grabbable : Component
 {
-	[Property] public Rigidbody Rigidbody;
+	public Rigidbody Rigidbody;
 
-	[Property] public Collider Collider;
+	public Collider Collider;
 
 	protected override void OnStart()
 	{
+		Log.Info(Game.ActiveScene.GetComponentInChildren<ManagerVR>());
+
 		Rigidbody = GetComponent<Rigidbody>();
 		if (Rigidbody == null) {
 			throw new System.Exception("Cannot use grabbable without rigidbody!");
