@@ -26,14 +26,14 @@ public sealed class TeleportVR : Component, IHandType, IDebugCasts
 	protected override void OnStart()
 	{
 		if (teleportable == null) {
-            Log.Info("SimulatorVR found!");
+            //Log.Info("SimulatorVR found!");
             teleportable = GetComponentInParent<SimulatorVR>();
         }
         else if (teleportable == null) {
-            Log.Info("ControllerVR found!");
+            //Log.Info("ControllerVR found!");
             teleportable = GetComponentInParent<ControllerVR>();
         } else {
-            Log.Info("No teleportable found, teleportation deactivated!");
+            //Log.Info("No teleportable found, teleportation deactivated!");
         }
 
         _avoidMouseJump.Start(1);
